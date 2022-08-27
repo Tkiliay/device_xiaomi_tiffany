@@ -22,11 +22,11 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/xiaomi/tiffany/device.mk)
 
 # Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/arrow/config/common.mk)
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := tiffany
-PRODUCT_NAME := lineage_tiffany
+PRODUCT_NAME := arrow_tiffany
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Xiaomi 5X
 PRODUCT_MANUFACTURER := Xiaomi
@@ -40,3 +40,6 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 
 # Set BUILD_FINGERPRINT variable to be picked up by both system and vendor build.prop
 BUILD_FINGERPRINT := "xiaomi/tiffany/tiffany_sprout:8.0.0/OPR1.170623.026/8.1.10:user/release-keys"
+
+# ArrowOS Properties
+DEVICE_MAINTAINER := Toyohama

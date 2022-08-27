@@ -48,7 +48,7 @@ ENABLE_VENDOR_RIL_SERVICE := true
 TARGET_USES_OLD_MNC_FORMAT := true
 
 # Security patch level
-VENDOR_SECURITY_PATCH := 2021-07-05
+VENDOR_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
 
 # Inherit from the proprietary version
 -include vendor/xiaomi/tiffany/BoardConfigVendor.mk
