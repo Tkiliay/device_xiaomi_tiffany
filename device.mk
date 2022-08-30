@@ -11,7 +11,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_n_mr1.mk
 
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
-DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-lineage
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 1920
@@ -24,7 +23,6 @@ PRODUCT_COPY_FILES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    MiuiCamera \
     camera.msm8953 \
     libmm-qcamera
 
@@ -72,13 +70,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
-# Touch HAL
-PRODUCT_PACKAGES += \
-    vendor.lineage.touch@1.0-service.xiaomi_8953
-
 # Inherit the proprietary files
 $(call inherit-product, vendor/xiaomi/tiffany/tiffany-vendor.mk)
 
-# Call the camera setup
-$(call inherit-product, vendor/xiaomi/MiuiCamera/MiuiCamera-vendor.mk)
-$(call inherit-product, vendor/xiaomi/MiuiCamera/tiffany.mk)

@@ -9,7 +9,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/aosp/common.mk)
+$(call inherit-product, vendor/arrow/config/common.mk)
 
 # Aosp Extended Properties
 TARGET_BOOT_ANIMATION_RES := 1080
@@ -33,3 +33,6 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 
 # Set BUILD_FINGERPRINT variable to be picked up by both system and vendor build.prop
 BUILD_FINGERPRINT := "xiaomi/tiffany/tiffany:8.1.0/OPM1.171019.019/V10.2.3.0.ODBCNXM:user/release-keys"
+
+# ArrowOS Properties
+DEVICE_MAINTAINER := Toyohama
